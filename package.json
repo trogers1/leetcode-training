@@ -6,7 +6,7 @@
   "scripts": {
     "pf": "prettier --write .",
     "prettier:fix": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,13 @@
   },
   "homepage": "https://github.com/trogers1/leetcode-training#readme",
   "dependencies": {
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.2",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
   }
 }
