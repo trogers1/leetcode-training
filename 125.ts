@@ -10,7 +10,7 @@ export function isPalindrome(s: string): boolean {
     }
     while (ignoreRegex.test(s[char2Pos])) {
       char2Pos--;
-      console.log('char2Pos++', char2Pos);
+      // console.log('char2Pos++', char2Pos);
     }
 
     // console.log({'afterwhile': true, 1: s[char1Pos], 2: s[char2Pos], char1Pos, char2Pos})
