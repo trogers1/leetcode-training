@@ -1,8 +1,8 @@
 import { isPalindrome } from './125';
 
-const testFuntion = isPalindrome;
+const testFunction = isPalindrome;
 
-type TestCase = { input: Parameters<typeof testFuntion>; output: ReturnType<typeof testFuntion> };
+type TestCase = { input: Parameters<typeof testFunction>; output: ReturnType<typeof testFunction> };
 const testCases: TestCase[] = [
   { input: ['A man, a plan, a canal: Panama'], output: true },
   { input: ['race a car'], output: false },
@@ -15,7 +15,7 @@ const testCases: TestCase[] = [
 describe('isPalindrome', () => {
   for (let testCase of testCases) {
     it(`${JSON.stringify(...testCase.input)} => ${testCase.output}`, () => {
-      expect(testFuntion(...testCase.input)).toStrictEqual(testCase.output);
+      expect(testFunction(...testCase.input)).toStrictEqual(testCase.output);
     });
   }
 });
