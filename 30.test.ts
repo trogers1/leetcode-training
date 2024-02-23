@@ -12,7 +12,7 @@ const testCases: TestCase[] = [
   { input: ['barfoofoobarthefoobarman', ['bar', 'foo', 'the']], output: [6, 9, 12] },
   { input: ['aaaaaa', ['a', 'a', 'a']], output: [0, 1, 2, 3] },
   { input: ['anopeaaaaaa', ['a', 'a', 'a']], output: [5, 6, 7, 8] },
-  { input: ['aaaaaaaaaaaaaa', ['aa', 'aa']], output: [0,1,2,3,4,5,6,7,8,9,10] },
+  { input: ['aaaaaaaaaaaaaa', ['aa', 'aa']], output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
   {
     input: [
       'abbaccaaabcabbbccbabbccabbacabcacbbaabbbbbaaabaccaacbccabcbababbbabccabacbbcabbaacaccccbaabcabaabaaaabcaabcacabaa',

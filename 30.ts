@@ -17,7 +17,7 @@ export function findSubstring(s: string, words: string[]): number[] {
     return [];
   }
   // console.log(
-    // `iterating from 0 -> ${s.length - fullSubstrLength}/${s.length} (-${fullSubstrLength}; ${words.join('|')})`
+  // `iterating from 0 -> ${s.length - fullSubstrLength}/${s.length} (-${fullSubstrLength}; ${words.join('|')})`
   // );
   for (let i = 0; i <= s.length - fullSubstrLength; i++) {
     // console.log({ i });
