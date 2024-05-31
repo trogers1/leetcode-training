@@ -4,8 +4,8 @@ const testFunction = canVisitAllRooms;
 
 type TestCase = { input: Parameters<typeof testFunction>; output: ReturnType<typeof testFunction> };
 const testCases: TestCase[] = [
-  { input: [[[1],[2],[3],[]]], output: true },
-  { input: [[[1,3],[3,0,1],[2],[0]]], output: false },
+  { input: [[[1], [2], [3], []]], output: true },
+  { input: [[[1, 3], [3, 0, 1], [2], [0]]], output: false },
   { input: [[[], [0]]], output: false },
   { input: [[[1], [0]]], output: true },
   { input: [[[20], [0]]], output: false },

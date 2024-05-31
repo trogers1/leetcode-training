@@ -48,11 +48,19 @@ export function coinChange(coins: number[], amount: number): number {
     if (currRemainderAmount < dedupCoins[currIndex]) {
       const smallerRemainderResult = getMinNumCoins({ currRemainderAmount, currIndex: currIndex + 1, currCoinsUsed });
       // Retry current number with a larger remainder that it should be able to divide into
-      const largerRemainderResult = getMinNumCoins({ currRemainderAmount: currRemainderAmount + dedupCoins[currIndex - 1], currIndex, currCoinsUsed: currCoinsUsed - 1 });
-      if (smallerRemainderResult.remainder === largerRemainderResult.remainder){
-        return smallerRemainderResult.numCoinsUsed > largerRemainderResult.numCoinsUsed ? largerRemainderResult : smallerRemainderResult;
+      const largerRemainderResult = getMinNumCoins({
+        currRemainderAmount: currRemainderAmount + dedupCoins[currIndex - 1],
+        currIndex,
+        currCoinsUsed: currCoinsUsed - 1,
+      });
+      if (smallerRemainderResult.remainder === largerRemainderResult.remainder) {
+        return smallerRemainderResult.numCoinsUsed > largerRemainderResult.numCoinsUsed
+          ? largerRemainderResult
+          : smallerRemainderResult;
       } else {
-        return smallerRemainderResult.remainder > largerRemainderResult.remainder ? largerRemainderResult : smallerRemainderResult;
+        return smallerRemainderResult.remainder > largerRemainderResult.remainder
+          ? largerRemainderResult
+          : smallerRemainderResult;
       }
     }
     const divisionResult = currRemainderAmount / dedupCoins[currIndex];
@@ -66,7 +74,8 @@ export function coinChange(coins: number[], amount: number): number {
         divisionResult,
       });
       return { numCoinsUsed: currCoinsUsed + divisionResult, remainder: 0 };
-    } else { let possibleRemainderAmount = currRemainderAmount % dedupCoins[currIndex];
+    } else {
+      let possibleRemainderAmount = currRemainderAmount % dedupCoins[currIndex];
       console.log(
         `${currRemainderAmount} is not divisible by ${dedupCoins[currIndex]}. Division Result: ${divisionResult}. Remainder: ${possibleRemainderAmount}`
       );

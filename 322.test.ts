@@ -10,7 +10,7 @@ const testCases: TestCase[] = [
   // { input: [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 10], output: 10 },
   // { input: [[4,5], 18], output: 4 },
   // { input: [[1,4,5], 18], output: 4 },
-  { input: [[4,5], 17], output: 4 },
+  { input: [[4, 5], 17], output: 4 },
   // { input: [[8,5], 20], output: 4 },
   // { input: [[186, 419, 83, 408], 6249], output: 20 },
   // { input: [[1,2,5], 11], output: 3 },
